@@ -38,9 +38,4 @@ public class HelloController {
                 + ", price:" + carProperties.getPrice()
                 + " myId:" + myId;
     }
-
-
-
-
-
 }
