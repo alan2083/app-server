@@ -13,6 +13,9 @@ public class CarController {
     @Autowired
     private CarRepository carRepository;
 
+    @Autowired
+    private CarTransactionalService carTransactionalService;
+
 
     /**
      * 查询列表
@@ -58,5 +61,10 @@ public class CarController {
     @DeleteMapping(value = "/car")
     public void carDelete(@RequestParam("id") Integer id){
         carRepository.delete(id);
+    }
+
+    @PostMapping(value = "/car/addtwo")
+    public void carAddTwo(){
+        carTransactionalService.insertTwo();
     }
 }
